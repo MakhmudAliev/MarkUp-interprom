@@ -1,0 +1,124 @@
+@import "variables";
+/*  Header */
+.header {
+  width: 90%;
+  height: 80px;
+  position: fixed;
+  top: 4%;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+
+  &-logo {
+    img {
+      height: 30px;
+      // Малые девайсы («ландшафтные телефоны», >= 576px)
+      @media (min-width: 576px) {
+        height: 30px;
+      }
+      // Средние девайсы («таблетки», >= 768px)
+      @media (min-width: 768px) { 
+        height: 50px;
+      }
+      // Большие девайсы (десктопы, >= 992px)
+      @media (min-width: 992px) {
+        height: 80px;
+      }
+      // Экстрабольшие девайсы (большие десктопы, >= 1200px)
+      @media (min-width: 1200px) {
+        height: 80px;
+      }    
+    }
+    z-index: 1;
+  }
+  &-menu {
+    width: 40%;
+    @media (max-width: 992px) {
+      width: 50%;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        list-style: none;
+      }
+    }
+    &__link {
+      color: $white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    @media (max-width: 800px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #2b2b2b;
+      transition: all 0.5s ease;
+      z-index: 0;
+      ul {
+        flex-direction: column;
+        margin-top: 20vh;
+        z-index: 0;
+        text-align: center;
+        height: 30vh;
+        li {
+          a{
+            font-size: 2.2rem;
+            color: $primary-color;
+            
+          }
+        }
+      }
+      &.showhidemenu {
+        transform: translateY(-100%);
+      }
+    }
+  }
+  &-phone {
+    z-index: 1;
+    &__tel {
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &__orderlink {
+      text-align: right;
+      margin-top: 5px;
+      a {
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px dotted $white;
+      }
+    }
+    @media (max-width: 576px) {
+      &__tel {
+        font-size: 1.6rem;
+      }
+      &__orderlink {
+        margin-top: 0px;
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      &__tel {
+        font-size: 1.5rem;
+      }
+      &__orderlink {
+        margin-top: 0px;
+        a {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

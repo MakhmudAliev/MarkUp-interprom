@@ -1,0 +1,26 @@
+@import 'variables';
+/* Interface */
+.mainbtn {
+  width: 270px;
+  height: 58px;
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.56);
+  border-radius: 3px;
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 100%;
+  @media (max-width: 600px) {
+    width: 200px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+  &:active, &:focus {
+    outline: none;
+  }
+  &:hover{
+    filter: brightness(95%);
+    cursor: pointer;
+  }
+}
