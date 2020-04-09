@@ -15,7 +15,7 @@
 }
 
 .section-content {
-  border: 1px solid salmon;
+  //border: 1px solid salmon;
   display: flex;
   @media (max-width: 992px) {
   }
@@ -27,9 +27,8 @@
 
   }
   &__text {
-    width: 70%;
     color: #ffffff;
-    border: 1px solid blue;
+    flex-grow: 1;
     h2 {
       text-shadow: 0 0 9px rgba(0, 0, 0, 0.56);
       font-size: 4.8rem;
@@ -45,7 +44,8 @@
     }
   }
   &__products {
-    border: 1px solid red;
+    flex-basis: 450px;
+    //border: 1px solid red;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -75,7 +75,7 @@
     align-items: center;
   }
   &__icon {
-
+    color: $white;
   }
   &__text {
     font-size: 16px;

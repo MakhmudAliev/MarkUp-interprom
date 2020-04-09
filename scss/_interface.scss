@@ -24,3 +24,14 @@
     cursor: pointer;
   }
 }
+@keyframes bounce {
+  0% {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+}
