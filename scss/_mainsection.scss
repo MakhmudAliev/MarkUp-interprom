@@ -14,6 +14,79 @@
   background-size: cover;
 }
 
+.section-content {
+  border: 1px solid salmon;
+  display: flex;
+  @media (max-width: 992px) {
+  }
+  @media (max-width: 800px) {
+  }
+  @media (max-width: 600px) {
+  }
+  @media (max-width: 350px) {
+
+  }
+  &__text {
+    width: 70%;
+    color: #ffffff;
+    border: 1px solid blue;
+    h2 {
+      text-shadow: 0 0 9px rgba(0, 0, 0, 0.56);
+      font-size: 4.8rem;
+      font-weight: 400;
+      line-height: 52px;
+      max-width: 520px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      max-width: 480px;
+      margin: 60px 0px 60px 0px;
+    }
+  }
+  &__products {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-radius: 3px;
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
+      opacity: 0.5;
+      &:hover {
+        box-shadow: 0 0 15px 3px rgba(255, 121, 0, 0.27);
+        border-radius: 3px;
+        border: 1px solid $primary-color;
+        background-color: #000000;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.product-block {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__icon {
+
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    color: $white;
+    opacity: 2;
+  }
+}
+
 .s1 {
   background-image: url(../img/screen1-bg.png);
   background-position: right;
@@ -23,7 +96,7 @@
   background-position: right;
 }
 .s3 {
-  background-image: url(../img/screen3-bg.png);
+  background-image: url(../img/screen3-bg.jpg);
   background-position: right;
 }
 .s4 {

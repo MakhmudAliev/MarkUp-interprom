@@ -76,6 +76,16 @@
     justify-content: space-between;
     align-items: center;
   }
+  span {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-bottom: 1px solid #d1d2d2;
+    border-right: 1px solid #d1d2d2;
+    animation: bounce 3s infinite;
+    animation-timing-function: ease;
+    cursor: pointer;
+  }
 }
 .bottom__social img {
   margin-right: 19px;
